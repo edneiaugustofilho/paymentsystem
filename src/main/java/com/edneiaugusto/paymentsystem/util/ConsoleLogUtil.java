@@ -1,4 +1,4 @@
-package com.edneiaugusto.paymentsystem;
+package com.edneiaugusto.paymentsystem.util;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;

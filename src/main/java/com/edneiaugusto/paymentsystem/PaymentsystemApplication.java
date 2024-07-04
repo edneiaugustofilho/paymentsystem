@@ -1,5 +1,6 @@
 package com.edneiaugusto.paymentsystem;
 
+import com.edneiaugusto.paymentsystem.util.ConsoleLogUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,10 +10,6 @@ import org.springframework.context.event.EventListener;
 @SpringBootApplication
 public class PaymentsystemApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(PaymentsystemApplication.class, args);
-    }
-
     @Value("${spring.application.name}")
     private String applicationName;
 
@@ -21,6 +18,10 @@ public class PaymentsystemApplication {
 
     @Value("${spring.profiles.active}")
     private String activeProfile;
+
+    public static void main(String[] args) {
+        SpringApplication.run(PaymentsystemApplication.class, args);
+    }
 
     @EventListener(ApplicationReadyEvent.class)
     public void printStartedBanner() {
